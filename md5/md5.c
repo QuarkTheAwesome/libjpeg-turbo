@@ -31,7 +31,7 @@
 
 #include "./md5.h"
 
-#ifdef __amigaos4__
+#if defined(__amigaos4__) || defined(HW_WUP)
 #include <machine/endian.h>
 #define le32toh(x) (((x & 0xff) << 24) | \
                     ((x & 0xff00) << 8) | \
